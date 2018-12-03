@@ -96,13 +96,13 @@ const unifiedSever = function (req, res) {
 // Handlers
 const handlers = {};
 
-handlers.ping = function (data, callback) {
-  callback(200);
+handlers.hello = function (data, callback) {
+  callback(200, { welcomeMessage: 'Hello!' });
 };
 handlers.notFound = function (data, callback) {
   callback(404);
 };
 
 const router = {
-  ping: handlers.ping
+  hello: handlers.hello
 };
